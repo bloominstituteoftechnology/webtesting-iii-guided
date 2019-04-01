@@ -1,24 +1,28 @@
 import React, { Component } from 'react';
-
+import logo from './logo.svg';
 import './App.css';
-import Speaker from './Speaker';
 
 class App extends Component {
-  state = {
-    message: 'nothing to say',
-  };
-
   render() {
     return (
       <div className="App">
-        <Speaker message={this.state.message} speak={this.speak} />
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
       </div>
     );
   }
-
-  speak = () => {
-    this.setState({ message: 'you are not mocking me' });
-  };
 }
 
 export default App;
